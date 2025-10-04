@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmileCare Dental Clinic</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Lora', serif;
+    }
+
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ensures image fills nicely */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* make text visible on dark parts of image */
+  z-index: 2;
+  padding: 0 15px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay for text readability */
+  z-index: 1;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* smaller hero */
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    height: 50vh; /* even smaller */
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+    .services .card {
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .services .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card {
+      border: none;
+      background: #f9f9f9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .testimonial-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 50px 0 20px;
+    }
+
+    footer h5 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #aaa;
+    }
+
+    .social-icons a:hover {
+      color: #00e5ff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">SmileCare</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <img src="homepagereal.png" alt="Hero Image" class="hero-img">
+  <div class="hero-content">
+    <h1 class="fw-bold">Your Smile, Our Priority</h1>
+    <p class="lead">Trusted dental care with compassion and expertise.</p>
+    <a href="#" class="btn btn-light btn-lg mt-3">Book Appointment</a>
+  </div>
+</section>
+
+
+<!-- Services -->
+<section class="services py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <h5 class="fw-bold">Teeth Whitening</h5>
+          <p>Brighten your smile with safe and effective whitening treatments.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <h5 class="fw-bold">Dental Implants</h5>
+          <p>Restore missing teeth with natural-looking implants.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <h5 class="fw-bold">Braces & Aligners</h5>
+          <p>Straighten your teeth with modern orthodontic solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Why Choose SmileCare?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold">Experienced Dentists</h5>
+        <p>Our team of specialists brings years of experience and expertise in all dental fields.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Modern Technology</h5>
+        <p>We use advanced dental equipment and techniques for safe and comfortable treatment.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Patient-Centered Care</h5>
+        <p>Your comfort and trust matter the most to us—we treat every patient like family.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">What Our Patients Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card text-center p-4">
+          <img src="front-view-young-female-doctor-medical-suit-yellow-wall.jpg" alt="Patient">
+          <p>"Dr. Sharma and his team are wonderful! My smile has never looked better."</p>
+          <h6 class="fw-bold">Priya M.</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card text-center p-4">
+          <img src="positive-girl-dentist.jpg" alt="Patient">
+          <p>"Professional staff, clean clinic, and great care. Highly recommend!"</p>
+          <h6 class="fw-bold">Rahul S.</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card text-center p-4">
+          <img src="tender-cute-european-model-showing-thumbs-up-near-face-smiling-broadly-while-looking.jpg" alt="Patient">
+          <p>"I was nervous, but they made me feel so comfortable throughout the process."</p>
+          <h6 class="fw-bold">Aditi K.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-4">
+        <h5>SmileCare Dental Clinic</h5>
+        <p>123 MG Road, Yelahanka<br>Bangalore, Karnataka</p>
+        <p><strong>Phone:</strong> +91 98765 43210<br>
+           <strong>Email:</strong> contact@smilecare.com</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Opening Hours</h5>
+        <p>Mon - Fri: 9:00 AM - 7:00 PM<br>
+           Sat: 10:00 AM - 5:00 PM<br>
+           Sun: Closed</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <p class="text-center">&copy; 2025 SmileCare Dental Clinic. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle + Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
